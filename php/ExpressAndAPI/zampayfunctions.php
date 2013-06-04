@@ -8,11 +8,7 @@
 	$PROXY_PORT = '808';
     $USE_PROXY = false;
     
-    if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
-        $protocol = 'http://';
-    } else {
-        $protocol = 'https://';
-    }
+    
     $HostName = 'http://localhost:8066/';
     
 	$SandboxFlag = true;
@@ -42,10 +38,8 @@
     
 	if ($SandboxFlag == true) 
 	{
-		#$API_Endpoint = "https://gwtest.zampay.com/pay/v1";
-		#$ZampayExpress_URL = "https://gwtest.zampay.com/pay/express";
-        $API_Endpoint = "http://localhost:9051/pay/api/v1";        
-        $ZampayExpress_URL = "http://localhost:9051/pay/express";
+		$API_Endpoint = "https://gwtest.zampay.com/pay/v1";
+		$ZampayExpress_URL = "https://gwtest.zampay.com/pay/express";
 	}
 	else
 	{
